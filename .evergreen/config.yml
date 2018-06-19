@@ -143,7 +143,7 @@ functions:
         silent: true
         script: |
           # DO NOT ECHO WITH XTRACE (which PREPARE_SHELL does)
-          NODE_LTS_NAME=${NODE_LTS_NAME} ATLAS_REPL='${atlas_repl}' ATLAS_SHRD='${atlas_shrd}' ATLAS_FREE='${atlas_free}' sh ${PROJECT_DIRECTORY}/.evergreen/run-atlas-tests.sh
+          NODE_LTS_NAME=${NODE_LTS_NAME} ATLAS_REPL=${atlas_repl} ATLAS_SHRD=${atlas_shrd} ATLAS_FREE=${atlas_free} sh ${PROJECT_DIRECTORY}/.evergreen/run-atlas-tests.sh
 
 pre:
   - func: "fetch source"
